@@ -1,0 +1,25 @@
+{
+    "input": "src/main.py",
+    "delay_ms": 5,
+    "ignore":["Scripts",".src/__pycache__","Lib","Include"],
+    "logging": {
+        "version": 1,
+        "handlers": {
+            "console": {
+                "class": "logging.StreamHandler",
+                "level": "INFO",
+                "formatter": "simple",
+                "stream": "ext://sys.stdout"
+            }
+        },
+        "formatters": {
+            "simple": {
+                "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+            }
+        },
+        "root": {
+            "level": "INFO",
+            "handlers": ["console"]
+        }
+    }
+}
